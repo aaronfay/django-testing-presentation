@@ -1,20 +1,15 @@
-from django.test import TestCase
-from django.test import Client
+from unittest import mock, TestCase
 
-from hackers.models import Participant
+from hackers import registrar
 
 
 class SignupTestCase(TestCase):
-    # The Django Way™
-
-    def setUp(self):
-        self.client = Client()
+    # The Uncle Bob Way™
 
     def test_should_sign_up_user(self):
-        expected_email = 'jill@python.com'
-        # post the data in
-        # query the db model
-        # assert the model you got back matches
+        # patch custom save method
+        # call registrar.add_participant
+        # assert called
 
 
 
@@ -40,6 +35,9 @@ class SignupTestCase(TestCase):
 
 
 
-        # self.client.post('/', {'email': expected_email})
-        # test = Participant.objects.get(email=expected_email)
-        # self.assertEqual(test.email, expected_email)
+
+
+
+        # with mock.patch('hackers.registrar.save_participant') as mock_save:
+        #     registrar.add_participant('foo')
+        #     self.assertTrue(mock_save.called)

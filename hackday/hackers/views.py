@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from hackers.forms import SignupForm
 from hackers.models import Participant
+from hackers import registrar
 
 
 def signup(request):
@@ -11,8 +12,7 @@ def signup(request):
         # - if they're not staff, email them a thank you
         form = SignupForm(request.POST)
         if form.is_valid():
-            participant = Participant(email=form.cleaned_data['email'])
-            participant.save()
+            registrar.add_participant(form.cleaned_data['email'])
 
     form = SignupForm()
     return render(request, 'hackers/signup.html', {'form': form})
