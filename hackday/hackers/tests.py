@@ -11,7 +11,7 @@ class SignupTestCase(TestCase):
         self.client = Client()
 
     def test_should_sign_up_user(self):
-        expected_email = 'joe@python.com'
+        expected_email = 'jill@python.com'
         # post the data in
         # query the db model
         # assert the model you got back matches
