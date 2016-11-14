@@ -1,8 +1,6 @@
-import mock
 import unittest
+from unittest import mock
 
-from hackers.forms import SignupForm
-from hackers.models import Participant
 from hackers.views import signup
 
 
@@ -11,11 +9,40 @@ class SignupTestCase(unittest.TestCase):
 
     def setUp(self):
         self.email = 'jill@python.com'
-        self.form = SignupForm(email=self.email)
-        self.request = mock.Mock(method='POST', POST=)
+        self.request = mock.Mock(method='POST', POST={'email': self.email})
 
     def test_should_sign_up_user(self):
-        
-        # post the data in
-        # query the db model
-        # assert the model you got back matches
+        # patch the model.save method
+        # call the signup view
+        # assert saved
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        # with mock.patch('hackers.models.Participant.save') as mock_save:
+        #     signup(self.request)
+        #     self.assertTrue(mock_save.called)
+
