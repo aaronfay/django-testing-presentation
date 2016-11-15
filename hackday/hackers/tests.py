@@ -19,34 +19,3 @@ class SignupTestCase(TestCase):
 
         # assert the model you got back matches
         self.assertEquals(expected_email, test.email)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # self.client.post('/', {'email': expected_email})
-        # test = Participant.objects.get(email=expected_email)
-        # self.assertEqual(test.email, expected_email)
