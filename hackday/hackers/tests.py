@@ -13,34 +13,3 @@ class SignupTestCase(TestCase):
             registrar.add_participant('foo@bar.com')
             # assert called
             self.assertTrue(mock_save.called)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # with mock.patch('hackers.registrar.save_participant') as mock_save:
-        #     registrar.add_participant('foo')
-        #     self.assertTrue(mock_save.called)
