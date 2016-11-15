@@ -25,6 +25,6 @@ repo:
 
 ## slides
 
-You can find the slides for my talk by (clicking here)[1].
+You can find the slides for my talk by [clicking here][1].
 
 [1]: https://docs.google.com/presentation/d/19ILWpChMwt6fqWfg4VLXoFTd5pR12ah_uXXvAy1ylXg/edit?usp=sharing
