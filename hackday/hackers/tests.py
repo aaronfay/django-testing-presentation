@@ -19,34 +19,3 @@ class SignupTestCase(unittest.TestCase):
             signup(self.request)
             # assert saved
             self.assertTrue(mock_save.called)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        # with mock.patch('hackers.models.Participant.save') as mock_save:
-        #     signup(self.request)
-        #     self.assertTrue(mock_save.called)
-
