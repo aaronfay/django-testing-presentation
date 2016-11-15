@@ -9,12 +9,16 @@ class SignupTestCase(unittest.TestCase):
 
     def setUp(self):
         self.email = 'jill@python.com'
-        self.request = mock.Mock(method='POST', POST={'email': self.email})
+        self.request = mock.Mock(method='POST',
+                                 POST={'email': self.email})
 
     def test_should_sign_up_user(self):
         # patch the model.save method
-        # call the signup view
-        # assert saved
+        with mock.patch('hackers.models.Participant.save') as mock_save:
+            # call the signup view
+            signup(self.request)
+            # assert saved
+            self.assertTrue(mock_save.called)
 
 
 
