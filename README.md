@@ -23,7 +23,14 @@ repo:
  * branch `c` pulls the business logic out of the view (ala Uncle Bob) and
    uses `unittest.mock.patch` to mock out the database layer
 
-## slides
+
+## the code
+
+The areas of interest in this repo will primarily be `hackers.views` and
+`hackers.tests`. If you toggle branches viewing those files you will see
+the primary differences in the test approaches.
+
+## the slides
 
 You can find the slides for my talk by [clicking here][1].
 
